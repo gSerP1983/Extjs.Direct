@@ -18,7 +18,6 @@ namespace Extjs.Direct
         }
 
         private static RemotingApi _metaCache;
-        private static string _metaScriptCache;
 
         private readonly IEnumerable<Type> _rpcTypes;
         private readonly DirectSettings _settings;
@@ -51,16 +50,6 @@ namespace Extjs.Direct
             }
 
             return result;
-        }
-
-        public string MetaScript()
-        {
-            return _metaScriptCache ?? (_metaScriptCache = MetaScriptInner());
-        }
-
-        public string MetaScriptInner()
-        {
-            return string.Format(@"Ext.ns('{0}'); Ext.app.REMOTING_API = {1};", _settings.Namespace, JsonConvert.SerializeObject(Meta()));
         }
 
         private static IEnumerable<MethodInfo> GetAllDeclaredMethods(Type type)
