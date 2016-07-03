@@ -47,6 +47,14 @@ namespace UnitTest.Extjs.Direct
         }
 
         [TestMethod]
+        public void MetaScriptTest()
+        {
+            var script = Executor.Instance.MetaScript();
+            Assert.IsNotNull(script);
+            Assert.IsTrue(script.Contains("Ext.app.REMOTING_API"));
+        }
+
+        [TestMethod]
         public void ExecuteTest()
         {
             var request = new Request

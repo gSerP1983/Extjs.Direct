@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extjs.Direct", "Extjs.Direc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Extjs.Direct", "UnitTest.Extjs.Direct\UnitTest.Extjs.Direct.csproj", "{BE1DC163-E084-4C17-BD08-1373A809B246}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.MVC", "Test.MVC\Test.MVC.csproj", "{5B4E53BB-69D6-4182-BE17-16DE0210E8D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extjs.Direct.Mvc", "Extjs.Direct.Mvc\Extjs.Direct.Mvc.csproj", "{DD735453-64E5-4793-ABC5-8C2C46303268}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B4E53BB-69D6-4182-BE17-16DE0210E8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B4E53BB-69D6-4182-BE17-16DE0210E8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B4E53BB-69D6-4182-BE17-16DE0210E8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B4E53BB-69D6-4182-BE17-16DE0210E8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD735453-64E5-4793-ABC5-8C2C46303268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD735453-64E5-4793-ABC5-8C2C46303268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD735453-64E5-4793-ABC5-8C2C46303268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD735453-64E5-4793-ABC5-8C2C46303268}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
