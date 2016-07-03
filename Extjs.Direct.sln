@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extjs.Direct", "Extjs.Direct\Extjs.Direct.csproj", "{CEC11DC2-AF1E-4D46-8277-77B9D06CB19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Extjs.Direct", "UnitTest.Extjs.Direct\UnitTest.Extjs.Direct.csproj", "{BE1DC163-E084-4C17-BD08-1373A809B246}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC11DC2-AF1E-4D46-8277-77B9D06CB19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC11DC2-AF1E-4D46-8277-77B9D06CB19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC11DC2-AF1E-4D46-8277-77B9D06CB19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC11DC2-AF1E-4D46-8277-77B9D06CB19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1DC163-E084-4C17-BD08-1373A809B246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1DC163-E084-4C17-BD08-1373A809B246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
