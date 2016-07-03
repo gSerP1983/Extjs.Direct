@@ -1,16 +1,27 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Extjs.Direct.Extension;
 
 namespace Extjs.Direct.Mvc
 {
     public class ExtjsControllerBase : Controller
     {
+        protected override IAsyncResult BeginExecuteCore(AsyncCallback callback, object state)
+        {
+            // enable CORS
+            ExtjsControllerHelper.EnableCors(HttpContext);
+            // disable Redirect
+            Response.SuppressFormsAuthenticationRedirect = true;
+
+            return base.BeginExecuteCore(callback, state);
+        }
+
         public ActionResult Meta()
         {
             if (Request.HttpMethod == "OPTIONS")
                 return ExtjsControllerHelper.Ok;
 
-            return Json(Executor.Instance.MetaScript(), JsonRequestBehavior.AllowGet);
+            return Json(Executor.Instance.Meta(), JsonRequestBehavior.AllowGet);
         }
 
         // for OPTIONS
