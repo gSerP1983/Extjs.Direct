@@ -36,17 +36,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\DirectSettings.cs" />
     <Compile Include="Domain\Messages.cs" />
     <Compile Include="Domain\Meta.cs" />
     <Compile Include="Executor.cs" />
+    <Compile Include="Extension\JsonExt.cs" />
     <Compile Include="Extension\StreamExt.cs" />
     <Compile Include="Extension\StringExt.cs" />
     <Compile Include="Extension\TypeExt.cs" />

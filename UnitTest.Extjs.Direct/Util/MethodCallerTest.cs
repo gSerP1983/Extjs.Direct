@@ -1,7 +1,7 @@
 ﻿using System;
+using Extjs.Direct.Extension;
 using Extjs.Direct.Util;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 
 namespace UnitTest.Extjs.Direct.Util
 {
@@ -54,7 +54,7 @@ namespace UnitTest.Extjs.Direct.Util
         public void MethodValueObjectParameterAsJsonCallTest()
         {
             // the object is transferred as json-string
-            Test("Method3", new object[] { JsonConvert.SerializeObject(new ObjectClass2()) }, 111);
+            Test("Method3", new object[] { new ObjectClass2().AsJson() }, 111);
         }
 
         [TestMethod]

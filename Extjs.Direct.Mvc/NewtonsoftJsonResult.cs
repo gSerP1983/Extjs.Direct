@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using Newtonsoft.Json;
+using Extjs.Direct.Extension;
 
 namespace Extjs.Direct.Mvc
 {
@@ -19,7 +19,7 @@ namespace Extjs.Direct.Mvc
                 throw new ArgumentNullException("context");
 
             var response = context.HttpContext.Response;
-            response.Write(JsonConvert.SerializeObject(_data));
+            response.Write(_data.AsJson());
         }
     }
 }

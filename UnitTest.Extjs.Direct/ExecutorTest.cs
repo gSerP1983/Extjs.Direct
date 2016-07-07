@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Extjs.Direct;
 using Extjs.Direct.Domain;
+using Extjs.Direct.Extension;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 
 namespace UnitTest.Extjs.Direct
 {
@@ -57,7 +57,7 @@ namespace UnitTest.Extjs.Direct
                 tid = 1,
                 data = new object[] { "1", "2" }
             };
-            var result = Executor.Instance.Execute(JsonConvert.SerializeObject(request), null) as Response[];
+            var result = Executor.Instance.Execute(request.AsJson(), null) as Response[];
             Assert.IsNotNull(result);
 
             var response = result.First();
@@ -88,7 +88,7 @@ namespace UnitTest.Extjs.Direct
         public void MissingMethodExecuteTest()
         {
             var request = new Request { action = typeof(Rpc).FullName, method = "Method", type = "rpc", tid = 1, data = null};
-            var result = Executor.Instance.Execute(JsonConvert.SerializeObject(request), null) as Response[];
+            var result = Executor.Instance.Execute(request.AsJson(), null) as Response[];
             Assert.IsNotNull(result);
 
             var response = result.First();
@@ -101,7 +101,7 @@ namespace UnitTest.Extjs.Direct
         public void EmptyTypeExecuteTest()
         {
             var request = new Request { action = "", method = "Method", type = "rpc", tid = 1, data = null };
-            var result = Executor.Instance.Execute(JsonConvert.SerializeObject(request), null) as Response[];
+            var result = Executor.Instance.Execute(request.AsJson(), null) as Response[];
             Assert.IsNotNull(result);
 
             var response = result.First();
@@ -121,7 +121,7 @@ namespace UnitTest.Extjs.Direct
                 tid = 1,
                 data = new object[]{"1","2", "3"}
             };
-            var result = Executor.Instance.Execute(JsonConvert.SerializeObject(request), null) as Response[];
+            var result = Executor.Instance.Execute(request.AsJson(), null) as Response[];
             Assert.IsNotNull(result);
 
             var response = result.First();
@@ -134,7 +134,7 @@ namespace UnitTest.Extjs.Direct
         public void MissingTypeExecuteTest()
         {
             var request = new Request { action = "MissingType", method = "Method", type = "rpc", tid = 1 };
-            var result = Executor.Instance.Execute(JsonConvert.SerializeObject(request), null) as Response[];
+            var result = Executor.Instance.Execute(request.AsJson(), null) as Response[];
             Assert.IsNotNull(result);
 
             var response = result.First();

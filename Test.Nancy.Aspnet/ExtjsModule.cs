@@ -1,4 +1,5 @@
 ﻿using Extjs.Direct;
+using Extjs.Direct.Extension;
 using Nancy.Extensions;
 using Nancy;
 
@@ -8,8 +9,8 @@ namespace Test.Nancy.Aspnet
     {
         public ExtjsModule()
         {
-            Get["/meta/"] = _ => Response.AsJavaScript(Executor.Instance.Meta());
-            Post["/"] = _ => Response.AsJavaScript(Executor.Instance.Execute(Request.Body.AsString(), Context));
+            Get["/meta/"] = _ => Response.AsJavaScript(Executor.Instance.Meta().AsJson());
+            Post["/rpc/"] = _ => Response.AsJavaScript(Executor.Instance.Execute(Request.Body.AsString(), Context).AsJson());
         }
     }
 }
