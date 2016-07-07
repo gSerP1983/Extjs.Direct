@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Extjs.Direct;
 using Extjs.Direct.Domain;
 using Nancy;
+using Nancy.Bootstrapper;
+using Nancy.Conventions;
+using Nancy.TinyIoc;
+using Response = Nancy.Response;
 
 namespace Test.Nancy.Aspnet
 {
@@ -15,11 +18,46 @@ namespace Test.Nancy.Aspnet
             Executor.Initialize(GetRpcTypes(), CreateObject, new DirectSettings("TestMvc"), LogError);
         }
 
+        protected override void RequestStartup(TinyIoCContainer container, IPipelines pipelines, NancyContext context)
+        {
+            base.RequestStartup(container, pipelines, context);
+
+            // CORS Enable
+            pipelines.AfterRequest.AddItemToEndOfPipeline(ctx => WithCors(ctx.Response));
+        }
+
+        protected override void ConfigureConventions(NancyConventions conventions)
+        {
+            base.ConfigureConventions(conventions);
+
+            // CORS Enable
+            for (var i = 0; i < conventions.StaticContentsConventions.Count(); i++)
+            {
+                var convention = conventions.StaticContentsConventions[i];
+                conventions.StaticContentsConventions[i] = (ctx, root) =>
+                {
+                    var response = convention.Invoke(ctx, root);
+                    return WithCors(response);
+                };
+            }
+        }
+
+        private static Response WithCors(Response response)
+        {
+            if (response == null)
+                return null;
+
+            return response
+                .WithHeader("Access-Control-Allow-Origin", "*") // вместо '*' можно прочесть из ctx.Request.Headers["Origin"].FirstOrDefault()
+                .WithHeader("Access-Control-Allow-Methods", "POST,GET")
+                .WithHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+        }
+
         private static object CreateObject(Type type, object context)
         {
             var any = type.GetConstructors().Any(x =>
                 x.GetParameters().Length == 1 &&
-                typeof(HttpContextBase).IsAssignableFrom(x.GetParameters().First().ParameterType)
+                typeof(NancyContext).IsAssignableFrom(x.GetParameters().First().ParameterType)
                 );
 
             if (any)

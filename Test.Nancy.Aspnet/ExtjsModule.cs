@@ -1,5 +1,4 @@
 ﻿using Extjs.Direct;
-using Extjs.Direct.Nancy;
 using Nancy.Extensions;
 using Nancy;
 

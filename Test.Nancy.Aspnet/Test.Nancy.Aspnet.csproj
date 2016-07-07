@@ -47,6 +47,10 @@
       <HintPath>..\packages\Nancy.Hosting.Aspnet.1.4.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -80,12 +84,9 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="ExtjsModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseExt.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Extjs.Direct.Nancy\Extjs.Direct.Nancy.csproj">
-      <Project>{dc23107d-9780-4e90-b1d5-23f59d1603ac}</Project>
-      <Name>Extjs.Direct.Nancy</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Extjs.Direct\Extjs.Direct.csproj">
       <Project>{cec11dc2-af1e-4d46-8277-77b9d06cb19f}</Project>
       <Name>Extjs.Direct</Name>

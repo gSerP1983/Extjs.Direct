@@ -2,7 +2,7 @@
 using Nancy.Responses;
 using Newtonsoft.Json;
 
-namespace Extjs.Direct.Nancy
+namespace Test.Nancy.Aspnet
 {
     public static class ResponseExt
     {
