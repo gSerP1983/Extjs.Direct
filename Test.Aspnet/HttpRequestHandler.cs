@@ -13,28 +13,24 @@ namespace Test.Aspnet
             Initializer.Initialize();
         }
 
-        public override async Task ProcessRequestAsync(HttpContext context)
+        public override Task ProcessRequestAsync(HttpContext context)
         {
             EnableCors(context);
 
             var path = context.Request.Path.Trim('/').ToUpperInvariant();
             if (path == "META" && context.Request.HttpMethod == "GET")
             {
-                await new TaskFactory().StartNew(() =>
-                {                    
-                    context.Response.ContentType = "text/javascript";
-                    context.Response.Write(Executor.Instance.Meta().AsJson());
-                });
+                context.Response.ContentType = "text/javascript";
+                context.Response.Write(Executor.Instance.Meta().AsJson());
             }
 
             if (path == "RPC" && context.Request.HttpMethod == "POST")
             {
-                await new TaskFactory().StartNew(() =>
-                {
-                    context.Response.ContentType = "text/javascript";
-                    context.Response.Write(Executor.Instance.Execute(context.Request.InputStream.AsString(), context).AsJson());
-                });
+                context.Response.ContentType = "text/javascript";
+                context.Response.Write(Executor.Instance.Execute(context.Request.InputStream.AsString(), context).AsJson());
             }
+
+            return Task.FromResult("ok");
         }
 
         private static void EnableCors(HttpContext httpContext)
