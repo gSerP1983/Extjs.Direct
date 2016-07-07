@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Nancy.Aspnet", "Test.N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Server.Base", "Test.Server.Base\Test.Server.Base.csproj", "{3DE2E0A6-8D6F-4E2D-88C6-D9DD415DA248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Aspnet", "Test.Aspnet\Test.Aspnet.csproj", "{159E2631-0A50-4ACC-8F6F-5C2C258C9516}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3DE2E0A6-8D6F-4E2D-88C6-D9DD415DA248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE2E0A6-8D6F-4E2D-88C6-D9DD415DA248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE2E0A6-8D6F-4E2D-88C6-D9DD415DA248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

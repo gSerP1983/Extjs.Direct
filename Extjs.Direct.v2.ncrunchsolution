@@ -12,6 +12,7 @@
   <MetricsExclusionList>
 Extjs.Direct.Mvc\Extjs.Direct.Mvc.csproj
 Test.Nancy.Aspnet\Test.Nancy.Aspnet.csproj
+Test.Server.Base\Test.Server.Base.csproj
 UnitTest.Extjs.Direct\UnitTest.Extjs.Direct.csproj
 </MetricsExclusionList>
 </SolutionConfiguration>
