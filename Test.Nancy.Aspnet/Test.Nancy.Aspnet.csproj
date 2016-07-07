@@ -73,6 +73,10 @@
       <Project>{cec11dc2-af1e-4d46-8277-77b9d06cb19f}</Project>
       <Name>Extjs.Direct</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Test.Server.Base\Test.Server.Base.csproj">
+      <Project>{3de2e0a6-8d6f-4e2d-88c6-d9dd415da248}</Project>
+      <Name>Test.Server.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
