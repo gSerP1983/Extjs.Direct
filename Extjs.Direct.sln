@@ -7,15 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extjs.Direct", "Extjs.Direc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest.Extjs.Direct", "UnitTest.Extjs.Direct\UnitTest.Extjs.Direct.csproj", "{BE1DC163-E084-4C17-BD08-1373A809B246}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extjs.Direct.Mvc", "Extjs.Direct.Mvc\Extjs.Direct.Mvc.csproj", "{DD735453-64E5-4793-ABC5-8C2C46303268}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Nancy.Aspnet", "Test.Nancy.Aspnet\Test.Nancy.Aspnet.csproj", "{ECC8AFE7-ABDB-43F2-870D-274C3DAB2A8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Server.Base", "Test.Server.Base\Test.Server.Base.csproj", "{3DE2E0A6-8D6F-4E2D-88C6-D9DD415DA248}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Aspnet", "Test.Aspnet\Test.Aspnet.csproj", "{159E2631-0A50-4ACC-8F6F-5C2C258C9516}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Mvc", "Test.Mvc\Test.Mvc.csproj", "{AA1DD50F-2C94-4FDB-AB1D-4409050AF646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +27,6 @@ Global
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE1DC163-E084-4C17-BD08-1373A809B246}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD735453-64E5-4793-ABC5-8C2C46303268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD735453-64E5-4793-ABC5-8C2C46303268}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD735453-64E5-4793-ABC5-8C2C46303268}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD735453-64E5-4793-ABC5-8C2C46303268}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECC8AFE7-ABDB-43F2-870D-274C3DAB2A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECC8AFE7-ABDB-43F2-870D-274C3DAB2A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECC8AFE7-ABDB-43F2-870D-274C3DAB2A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,10 +39,6 @@ Global
 		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{159E2631-0A50-4ACC-8F6F-5C2C258C9516}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA1DD50F-2C94-4FDB-AB1D-4409050AF646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA1DD50F-2C94-4FDB-AB1D-4409050AF646}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA1DD50F-2C94-4FDB-AB1D-4409050AF646}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA1DD50F-2C94-4FDB-AB1D-4409050AF646}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
