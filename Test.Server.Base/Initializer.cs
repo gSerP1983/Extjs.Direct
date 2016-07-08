@@ -14,7 +14,7 @@ namespace Test.Server.Base
             Executor.Initialize(
                 GetRpcTypes(), 
                 CreateObject, 
-                new DirectSettings("Test"), 
+                new DirectSettings("serp1983"), 
                 LogError
             );
         }
