@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using Extjs.Direct;
 using Extjs.Direct.Extension;
+using Test.WebApi.Util;
 
 namespace Test.WebApi.Controllers
 {
@@ -10,17 +11,17 @@ namespace Test.WebApi.Controllers
     public class ExtjsController : ApiController
     {
         [AcceptVerbs("GET")]
-        public string Meta()
+        public IHttpActionResult Meta()
         {
-            return Executor.Instance.Meta().AsJson();
+            return new RawJsonActionResult(Executor.Instance.Meta().AsJson());
         }
 
         [AcceptVerbs("POST")]
-        public string Rpc()
+        public IHttpActionResult Rpc()
         {
             var httpContext = (HttpContextWrapper)Request.Properties["MS_HttpContext"];
             var request = httpContext.Request.InputStream.AsString();
-            return Executor.Instance.Execute(request, httpContext).AsJson();
+            return new RawJsonActionResult(Executor.Instance.Execute(request, httpContext).AsJson());
         }
     }
 }
