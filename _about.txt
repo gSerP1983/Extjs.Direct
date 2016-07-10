@@ -1,0 +1,11 @@
+Test.Aspnet
+http://localhost:58499/
+
+Test.Mvc
+http://localhost:21251/extjs/
+
+Test.Nancy.Aspnet
+http://localhost:52613/
+
+Test.WebApi
+http://localhost:21827/api/extjs/

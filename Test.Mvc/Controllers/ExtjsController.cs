@@ -13,7 +13,7 @@ namespace Test.Mvc.Controllers
             if (Request.HttpMethod == "OPTIONS")
                 return ExtjsControllerHelper.Ok;
 
-            return Json(Executor.Instance.Meta(), JsonRequestBehavior.AllowGet);
+            return new NewtonsoftJsonResult(Executor.Instance.Meta());
         }
 
         // OPTIONS
