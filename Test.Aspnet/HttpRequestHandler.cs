@@ -20,13 +20,13 @@ namespace Test.Aspnet
             var path = context.Request.Path.Trim('/').ToUpperInvariant();
             if (path == "META" && context.Request.HttpMethod == "GET")
             {
-                context.Response.ContentType = "text/javascript";
+                context.Response.ContentType = "application/json";
                 context.Response.Write(Executor.Instance.Meta().AsJson());
             }
 
             if (path == "RPC" && context.Request.HttpMethod == "POST")
             {
-                context.Response.ContentType = "text/javascript";
+                context.Response.ContentType = "application/json";
                 context.Response.Write(Executor.Instance.Execute(context.Request.InputStream.AsString(), context).AsJson());
             }
 

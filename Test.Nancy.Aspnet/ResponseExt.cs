@@ -1,5 +1,4 @@
-﻿using Extjs.Direct.Extension;
-using Nancy;
+﻿using Nancy;
 using Nancy.Responses;
 
 namespace Test.Nancy.Aspnet
@@ -8,7 +7,7 @@ namespace Test.Nancy.Aspnet
     {
         public static Response AsJavaScript(this IResponseFormatter formatter, string contents)
         {
-            return new TextResponse(contents, "text/javascript");
+            return new TextResponse(contents, "application/json");
         }
     }
 }
