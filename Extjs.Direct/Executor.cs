@@ -173,6 +173,10 @@ namespace Extjs.Direct
 
         private static Response CreateErrorResponse(Request request, Exception ex)
         {
+            var targetInvocationException = ex as TargetInvocationException;
+            if (targetInvocationException != null && targetInvocationException.InnerException != null)
+                ex = targetInvocationException.InnerException;
+            
             var response = Response.Map(request);
             response.meta.success = false;
             response.meta.msg = ex.Message;
